@@ -186,14 +186,15 @@ Zero-shot foundation forecast under AI-automation structural shift, generated wi
 ---
 
 ### CONCEPT DIAGRAM
-flowchart TB
-    SRM["SRM · Statistical Research Methods<br/>22 skills"]
-    MAA["MAA · Meta-Analysis<br/>7 skills"]
-    PDA["PDA · Python Data Analysis<br/>13 skills"]
-    MLK["MLK · Machine Learning<br/>13 skills"]
-    FLOW["FLOW · Workflow<br/>6 skills"]
 
-    R["Dunn Research Skills<br/>61 skills across 5 families"]
+flowchart TB
+    R["Dunn Research Skills<br/>61 Skills Across 5 Families"]
+
+    SRM["SRM · Statistical Research Methods<br/>22 Skills"]
+    MAA["MAA · Meta-Analysis<br/>7 Skills"]
+    PDA["PDA · Python Data Analysis<br/>13 Skills"]
+    MLK["MLK · Machine Learning<br/>13 Skills"]
+    FLOW["FLOW · Workflow<br/>6 Skills"]
 
     R --> SRM
     R --> MAA
@@ -206,12 +207,20 @@ flowchart TB
     PDA --> MLK
     FLOW --> SRM
 
-    classDef root fill:#FFFFFF,stroke:#000000,stroke-width:3px,color:#000
-    classDef srm fill:#FFD166,stroke:#B8860B,stroke-width:2px,color:#000
-    classDef maa fill:#8CE99A,stroke:#2F9E44,stroke-width:2px,color:#000
-    classDef pda fill:#74C0FC,stroke:#1971C2,stroke-width:2px,color:#000
-    classDef mlk fill:#FFA8A8,stroke:#C92A2A,stroke-width:2px,color:#000
-    classDef flow fill:#D0BFFF,stroke:#6741D9,stroke-width:2px,color:#000
+    classDef root fill:#FFFFFF,stroke:#000000,stroke-width:3px,color:#000000
+    classDef srm fill:#FFD166,stroke:#B8860B,stroke-width:2px,color:#000000
+    classDef maa fill:#8CE99A,stroke:#2F9E44,stroke-width:2px,color:#000000
+    classDef pda fill:#74C0FC,stroke:#1971C2,stroke-width:2px,color:#000000
+    classDef mlk fill:#FFA8A8,stroke:#C92A2A,stroke-width:2px,color:#000000
+    classDef flow fill:#D0BFFF,stroke:#6741D9,stroke-width:2px,color:#000000
+
+    class R root
+    class SRM srm
+    class MAA maa
+    class PDA pda
+    class MLK mlk
+    class FLOW flow
+
 
     class R root
     class SRM srm
