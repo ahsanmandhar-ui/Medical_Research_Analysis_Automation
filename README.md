@@ -185,8 +185,9 @@ Zero-shot foundation forecast under AI-automation structural shift, generated wi
 
 ---
 
-### CONCEPT
+### CONCEPT DIAGRAM
 
+```mermaid
 flowchart TB
     R["Dunn Research Skills: 61 Skills Across 5 Families"]
 
@@ -213,6 +214,7 @@ flowchart TB
     style PDA fill:#74C0FC,stroke:#1971C2,color:#000000
     style MLK fill:#FFA8A8,stroke:#C92A2A,color:#000000
     style FLOW fill:#D0BFFF,stroke:#6741D9,color:#000000
+```
 
-### CONCEPT DIAGRAM
+
 
