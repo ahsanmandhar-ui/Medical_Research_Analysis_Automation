@@ -184,34 +184,37 @@ Zero-shot foundation forecast under AI-automation structural shift, generated wi
 | | f6 | flow-corpus-extraction |
 
 ---
+### Overview
+flowchart TB
+    R["Automation Research Skills<br/>61 skills across 5 families"]
 
-## Roadmap: Data Analysis Automation
+    SRM["SRM · Statistical Research Methods<br/>22 skills<br/>Question → design → describe → infer → report"]
+    MAA["MAA · Meta-Analysis<br/>7 skills<br/>Effect sizes, pooling, heterogeneity, bias"]
+    PDA["PDA · Python Data Analysis<br/>13 skills<br/>Python, NumPy, pandas, plotting, modelling"]
+    MLK["MLK · Machine Learning<br/>13 skills<br/>Linear algebra, features, models, clustering"]
+    FLOW["FLOW · Workflow<br/>6 skills<br/>Environment, hygiene gates, supervision, pipelines"]
 
-- [x] Research toolkit: 61 method guides (SRM, MAA, PDA, MLK, FLOW)
-- [x] TimesFM-1.0-200M zero-shot forecast pipeline
-- [x] Mermaid skill-graph diagrams for all families
-- [ ] Automated validity-condition checking per dataset
-- [ ] Scheduled forecast re-runs (GitHub Actions)
-- [ ] Auto-generated research reports from templates
-- [ ] Integration with additional foundation models
+    R --> SRM
+    R --> MAA
+    R --> PDA
+    R --> MLK
+    R --> FLOW
 
-**Built with** TimesFM · Mermaid · Python
+    SRM --> PDA
+    MAA --> PDA
+    PDA --> MLK
+    FLOW --> SRM
 
-### Security — What Gets Pushed
+    classDef root fill:#FFFFFF,stroke:#000000,stroke-width:3px,color:#000
+    classDef srm fill:#FFD166,stroke:#B8860B,stroke-width:2px,color:#000
+    classDef maa fill:#8CE99A,stroke:#2F9E44,stroke-width:2px,color:#000
+    classDef pda fill:#74C0FC,stroke:#1971C2,stroke-width:2px,color:#000
+    classDef mlk fill:#FFA8A8,stroke:#C92A2A,stroke-width:2px,color:#000
+    classDef flow fill:#D0BFFF,stroke:#6741D9,stroke-width:2px,color:#000
 
-Only essential, human-reviewed files are tracked. Excluded via `.gitignore`:
-
-| Category | Excluded |
-|----------|----------|
-| Python cache | `__pycache__/`, `*.pyc`, `*.pyo` |
-| Environments | `.venv/`, `env/`, `.env`, `*.log` |
-| IDE | `.vscode/`, `.idea/`, `.oxlintrc.json` |
-| OS junk | `.DS_Store`, `Thumbs.db` |
-| Archives | `*.zip`, `*.tar.gz`, `*.gz` |
-| AI/cache | `tmp/`, `.cache/`, `hf_timesfm_*/`, `.huggingface/` |
-| AI-generated | `*_ai_generated*`, `*_generated.py` |
-| Jupyter | `.ipynb_checkpoints/` |
-
-**Tracked files only:** `README.md`, `.gitignore`, `LICENSE`, `requirements.txt`, `data/*.csv`, `analysis/*.py`, `skills/**/*.md`, `skills/mermaid/*.mmd`, `docs/*.mmd`.
-
-
+    class R root
+    class SRM srm
+    class MAA maa
+    class PDA pda
+    class MLK mlk
+    class FLOW flow
