@@ -29,14 +29,9 @@ Zero-shot foundation forecast under AI-automation structural shift, generated wi
 | 2031 | — | — | — |
 
 > Run `python analysis/timesfm_forecast_v2.py` to generate the forecast CSV, table, and PNG. Outputs land in `data/`.
-
 ### SRM — Statistical Research Methods (22 skills)
 
-<details>
-<summary>Click to expand SRM skill details</summary>
-
 ```mermaid
-%%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#e1f5fe', 'primaryTextColor': '#01579b', 'primaryBorderColor': '#0277bd', 'lineColor': '#0288d1', 'secondaryColor': '#f1f8e9', 'tertiaryColor': '#fff3e0'}}}%%
 flowchart TD
     classDef default fill:#e1f5fe,stroke:#01579b,stroke-width:2px,color:#01579b,font-size:11px
     classDef group fill:#c5e1a5,stroke:#33691e,stroke-width:3px,color:#33691e,font-size:12px,font-weight:bold
@@ -67,14 +62,10 @@ flowchart TD
         s21[["srm-reporting-research<br/>Build and QC the written scientific report following Dunn structure<br/>AIMRaD and STARD-compliant report assembly<br/>Results section, tables, figures, critical reading"]]
         s22[["srm-correlation-linear-integration<br/>Integrate correlation and regression results<br/>Combine r, R-squared, and regression output<br/>Report strength of evidence and effect size"]]
 
-
+        s1 --> s2 --> s3 --> s4 --> s5 --> s6 --> s7 --> s8 --> s9 --> s10 --> s11 --> s12 --> s13 --> s14 --> s15 --> s16 --> s17 --> s18 --> s19 --> s20 --> s21 --> s22
 ### MAA — Meta-Analysis (7 skills)
 
-<details>
-<summary>Click to expand MAA skill details</summary>
-
 ```mermaid
-%%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#f3e5f5', 'primaryTextColor': '#4a148c', 'primaryBorderColor': '#7b1fa2', 'lineColor': '#8e24aa', 'secondaryColor': '#e8f5e9', 'tertiaryColor': '#fff3e0'}}}%%
 flowchart TD
     classDef default fill:#f3e5f5,stroke:#4a148c,stroke-width:2px,color:#4a148c,font-size:11px
     classDef group fill:#c5e1a5,stroke:#33691e,stroke-width:3px,color:#33691e,font-size:12px,font-weight:bold
@@ -90,14 +81,10 @@ flowchart TD
         m6[["maa-subgroup-meta-regression<br/>Subgroup contrasts and meta-regression<br/>Sensitivity and robustness analysis<br/>Test whether study characteristics explain pooled effect<br/>Drop-one sensitivity analysis"]]
         m7[["maa-validation-vs-r-stata<br/>Cross-validate Python meta-analysis against R meta/metafor or Stata<br/>Write reference path for comparison<br/>Choose cross-tool tolerance<br/>Explain small discrepancies between tools"]]
 
-
+        m1 --> m2 --> m3 --> m4 --> m5 --> m6 --> m7
 ### PDA — Python Data Analysis (13 skills)
 
-<details>
-<summary>Click to expand PDA skill details</summary>
-
 ```mermaid
-%%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#e8f5e9', 'primaryTextColor': '#1b5e20', 'primaryBorderColor': '#33691e', 'lineColor': '#43a047', 'secondaryColor': '#e1f5fe', 'tertiaryColor': '#fff3e0'}}}%%
 flowchart TD
     classDef default fill:#e8f5e9,stroke:#1b5e20,stroke-width:2px,color:#1b5e20,font-size:11px
     classDef group fill:#c5e1a5,stroke:#33691e,stroke-width:3px,color:#33691e,font-size:12px,font-weight:bold
@@ -119,14 +106,10 @@ flowchart TD
         p12[["pda-ipython-jupyter-workflow<br/>Pure-Python reproduction of IPython/Jupyter analysis workflow<br/>Magic commands, timing, profiling, code introspection<br/>Structure notebook for reproducibility"]]
         p13[["pda-analysis-examples<br/>Analysis examples and worked demonstrations<br/>End-to-end analysis walkthroughs<br/>Reference implementations"]]]
 
-
+        p1 --> p2 --> p3 --> p4 --> p5 --> p6 --> p7 --> p8 --> p9 --> p10 --> p11 --> p12 --> p13
 ### MLK — Machine Learning (13 skills)
 
-<details>
-<summary>Click to expand MLK skill details</summary>
-
 ```mermaid
-%%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#fff3e0', 'primaryTextColor': '#e65100', 'primaryBorderColor': '#f57c00', 'lineColor': '#fb8c00', 'secondaryColor': '#e1f5fe', 'tertiaryColor': '#f3e5f5'}}}%%
 flowchart TD
     classDef default fill:#fff3e0,stroke:#e65100,stroke-width:2px,color:#e65100,font-size:11px
     classDef group fill:#c5e1a5,stroke:#33691e,stroke-width:3px,color:#33691e,font-size:12px,font-weight:bold
@@ -148,14 +131,10 @@ flowchart TD
         l12[["mlk-neural-networks<br/>Build, train and diagnose feedforward neural networks<br/>Hand-written one-hidden-layer numpy MLP<br/>Forward propagation, overfitting diagnostics<br/>Keras-style DNN/MLP fundamentals"]]
         l13[["mlk-clustering<br/>Partition observations with no target unsupervised clustering<br/>sklearn.cluster + sklearn.metrics<br/>How many clusters, silhouette analysis<br/>K-means, hierarchical, DBSCAN"]]]
 
-
+        l1 --> l2 --> l3 --> l4 --> l5 --> l6 --> l7 --> l8 --> l9 --> l10 --> l11 --> l12 --> l13
 ### FLOW — Workflow (6 skills)
 
-<details>
-<summary>Click to expand FLOW skill details</summary>
-
 ```mermaid
-%%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#fce4ec', 'primaryTextColor': '#880e4f', 'primaryBorderColor': '#ad1457', 'lineColor': '#d81b60', 'secondaryColor': '#e1f5fe', 'tertiaryColor': '#fff3e0'}}}%%
 flowchart TD
     classDef default fill:#fce4ec,stroke:#880e4f,stroke-width:2px,color:#880e4f,font-size:11px
     classDef group fill:#c5e1a5,stroke:#33691e,stroke-width:3px,color:#33691e,font-size:12px,font-weight:bold
@@ -170,13 +149,10 @@ flowchart TD
         f5[["flow-meta-analysis-pipeline<br/>End-to-end meta-analysis / evidence pooling<br/>Study-level intake, per-study effect sizes<br/>Reproduce Cochrane pooled estimate"]]
         f6[["flow-corpus-extraction<br/>Re-extract or extend PDF document corpus with PyMuPDF<br/>Inclusive page-range Markdown rendering<br/>Monospace code detection by per-line font mix<br/>Map printed folios to PDF pages"]]
 
+        f1 --> f2 --> f3 --> f4 --> f5 --> f6
 ### Full Skill Graph — All 61 Skills
 
-<details>
-<summary>Click to expand full skill graph (all families)</summary>
-
 ```mermaid
-%%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#e1f5fe', 'primaryTextColor': '#01579b', 'primaryBorderColor': '#0277bd', 'lineColor': '#0288d1', 'secondaryColor': '#f1f8e9', 'tertiaryColor': '#fff3e0'}}}%%
 flowchart TB
     classDef family fill:#e1f5fe,stroke:#01579b,stroke-width:3px,color:#01579b,font-size:13px,font-weight:bold
 
@@ -282,42 +258,31 @@ Read `skills/research-toolkit/SKILL.md` for the full routing guide.
     class SRM,MAA,PDA,MLK,FLOW family
     linkStyle default stroke-width:2px,fill:none,stroke:#0288d1
 ```
-</details>
-        f1 --> f2 --> f3 --> f4 --> f5 --> f6
     end
 
     class FLOW group
     linkStyle default stroke-width:2px,fill:none,stroke:#d81b60
 ```
-</details>
-        l1 --> l2 --> l3 --> l4 --> l5 --> l6 --> l7 --> l8 --> l9 --> l10 --> l11 --> l12 --> l13
     end
 
     class MLK group
     linkStyle default stroke-width:2px,fill:none,stroke:#fb8c00
 ```
-</details>
-        p1 --> p2 --> p3 --> p4 --> p5 --> p6 --> p7 --> p8 --> p9 --> p10 --> p11 --> p12 --> p13
     end
 
     class PDA group
     linkStyle default stroke-width:2px,fill:none,stroke:#43a047
 ```
-</details>
-        m1 --> m2 --> m3 --> m4 --> m5 --> m6 --> m7
     end
 
     class MAA group
     linkStyle default stroke-width:2px,fill:none,stroke:#8e24aa
 ```
-</details>
-        s1 --> s2 --> s3 --> s4 --> s5 --> s6 --> s7 --> s8 --> s9 --> s10 --> s11 --> s12 --> s13 --> s14 --> s15 --> s16 --> s17 --> s18 --> s19 --> s20 --> s21 --> s22
     end
 
     class SRM group
     linkStyle default stroke-width:2px,fill:none,stroke:#0288d1
 ```
-</details>
 
 ---
 
