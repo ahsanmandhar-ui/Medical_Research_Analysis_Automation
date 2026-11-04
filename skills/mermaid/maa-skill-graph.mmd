@@ -1,16 +1,21 @@
+%%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#f3e5f5', 'primaryTextColor': '#4a148c', 'primaryBorderColor': '#7b1fa2', 'lineColor': '#8e24aa', 'secondaryColor': '#e8f5e9', 'tertiaryColor': '#fff3e0'}}}%%
 flowchart TD
-    classDef default fill:#f9f,stroke:#333,stroke-width:2px
-    classDef entry fill:#bbf,stroke:#f66,stroke-width:2px
-    classDef analysis fill:#bfb,stroke:#f66,stroke-width:2px
+    classDef default fill:#f3e5f5,stroke:#4a148c,stroke-width:2px,color:#4a148c,font-size:11px
+    classDef group fill:#c5e1a5,stroke:#33691e,stroke-width:3px,color:#33691e,font-size:12px,font-weight:bold
 
-    A[Effect Sizes] --> B[Pooling Models]
-    B --> C[Heterogeneity]
-    C --> D[Forest Plots]
-    D --> E[Publication Bias]
-    E --> F[Subgroup & Meta-Regression]
-    F --> G[Validation vs R/Stata]
+    subgraph MAA["MAA - Meta-Analysis (7 skills) - Copyright Ahsan Mandhar"]
+        direction TB
 
-    A:::entry
-    G:::analysis
+        m1[["maa-effect-sizes<br/>Compute study-level effect sizes for meta-analytic input table<br/>Risk ratio RR, odds ratio OR on log-OR scale, risk difference RD<br/>Variance, standard error, CI behind one effect size<br/>Handle zero cell or dropouts"]]
+        m2[["maa-pooling-models<br/>Fixed- and random-effects pooling of meta-analytic evidence<br/>Inverse-variance fixed-effect weights<br/>Mantel-Haenszel and Peto methods<br/>Study weights and pooled result"]]
+        m3[["maa-heterogeneity<br/>Heterogeneity statistics computed from first formulas<br/>Cochran's Q with chi-square P value<br/>I-squared, tau-squared, H-squared<br/>Prediction interval"]]
+        m4[["maa-forest-plots<br/>Draw publication-quality meta-analysis forest plots<br/>Replace unavailable PythonMeta and zEpid ForestPlot<br/>Log versus linear axis, null-line placement<br/>Size study marks by precision"]]
+        m5[["maa-publication-bias<br/>Detect publication bias and small-study effects<br/>Contour-enhanced funnel plot with matplotlib zones<br/>Egger and Begg P-values<br/>Assess asymmetry in funnel plot"]]
+        m6[["maa-subgroup-meta-regression<br/>Subgroup contrasts and meta-regression<br/>Sensitivity and robustness analysis<br/>Test whether study characteristics explain pooled effect<br/>Drop-one sensitivity analysis"]]
+        m7[["maa-validation-vs-r-stata<br/>Cross-validate Python meta-analysis against R meta/metafor or Stata<br/>Write reference path for comparison<br/>Choose cross-tool tolerance<br/>Explain small discrepancies between tools"]]
 
-    linkStyle default stroke-width:2px,fill:none,stroke:#666
+        m1 --> m2 --> m3 --> m4 --> m5 --> m6 --> m7
+    end
+
+    class MAA group
+    linkStyle default stroke-width:2px,fill:none,stroke:#8e24aa

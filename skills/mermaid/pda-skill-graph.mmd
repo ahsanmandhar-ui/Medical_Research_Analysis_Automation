@@ -1,22 +1,27 @@
+%%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#e8f5e9', 'primaryTextColor': '#1b5e20', 'primaryBorderColor': '#33691e', 'lineColor': '#43a047', 'secondaryColor': '#e1f5fe', 'tertiaryColor': '#fff3e0'}}}%%
 flowchart TD
-    classDef default fill:#f9f,stroke:#333,stroke-width:2px
-    classDef entry fill:#bbf,stroke:#f66,stroke-width:2px
-    classDef analysis fill:#bfb,stroke:#f66,stroke-width:2px
+    classDef default fill:#e8f5e9,stroke:#1b5e20,stroke-width:2px,color:#1b5e20,font-size:11px
+    classDef group fill:#c5e1a5,stroke:#33691e,stroke-width:3px,color:#33691e,font-size:12px,font-weight:bold
 
-    A[Python Language Core] --> B[NumPy Fundamentals]
-    B --> C[NumPy Advanced]
-    C --> D[Pandas Foundations]
-    D --> E[Data Loading / IO]
-    E --> F[Data Cleaning]
-    F --> G[Data Wrangling / Reshape]
-    G --> H[GroupBy & Aggregation]
-    H --> I[Time Series]
-    I --> J[Plotting & Visualization]
-    J --> K[Modeling Libraries]
-    K --> L[IPython / Jupyter Workflow]
-    L --> M[Analysis Examples]
+    subgraph PDA["PDA - Python Data Analysis (13 skills) - Copyright Ahsan Mandhar"]
+        direction TB
 
-    A:::entry
-    M:::analysis
+        p1[["pda-python-language-core<br/>Core Python language semantics for data analysis<br/>Standard library: re, itertools, collections, pathlib, os, sys, tempfile<br/>No third-party dependencies<br/>Raw-Python data prep, grouping, counting with dict/set"]]
+        p2[["pda-numpy-fundamentals<br/>NumPy ndarray toolkit for array-oriented data work<br/>Build, subset, aggregate NumPy arrays<br/>Select rows by boolean mask or integer index array<br/>Compute sum/mean along axis, sort, unique"]]
+        p3[["pda-numpy-advanced<br/>Advanced NumPy internals: shape, strides, flags, dtype hierarchy<br/>Zero-copy strided views, np.issubdtype<br/>Fix operands could not be broadcast together errors<br/>Handle arrays too large for RAM"]]
+        p4[["pda-pandas-foundations<br/>Build and inspect core pandas objects: Series, DataFrame, Index<br/>Creation from arrays, lists, dicts<br/>Index and name attributes<br/>Select rows/columns with loc/iloc, filter with mask"]]
+        p5[["pda-data-loading-io<br/>Load data into pandas DataFrame from every source<br/>CSV, Excel, JSON, database query into DataFrame<br/>scikit-learn toy datasets, seeded simulated generators"]]
+        p6[["pda-data-cleaning<br/>Clean data end to end in pure Python pandas/numpy<br/>Drop duplicate rows, filter rows on condition<br/>Handle NaN values, join two frames"]]
+        p7[["pda-data-wrangling-reshape<br/>Wrangle pandas DataFrame end to end<br/>Creation, description head/tail/shape/describe<br/>loc vs iloc and conditional selection<br/>Count unique classes, group by category"]]
+        p8[["pda-groupby-aggregation<br/>Split-apply-combine in pure pandas/numpy<br/>Group by array, column, dict, Series, callable, MultiIndex level<br/>Optimized or custom aggregation functions<br/>Per-group stats, top-n per group, pivot tables"]]
+        p9[["pda-time-series<br/>Date/timestamp APIs, date_range and frequency aliases<br/>Shifting, resampling down/up-sample, OHLC<br/>Rolling/expanding windows with min_periods, EWMA<br/>Parse dates, handle time zones"]]
+        p10[["pda-plotting-visualization<br/>Build publication figures from pandas frames with matplotlib and seaborn<br/>Plot Series or DataFrame, histogram, KDE<br/>Subplots/panels, legend, error bars<br/>Save figure headless"]]
+        p11[["pda-modeling-libraries<br/>Fit statistical and ML models from pandas frame<br/>Patsy formula design matrices: dmatrices, standardize/center<br/>C(), I(), key1:key2 interactions<br/>statsmodels, patsy, sklearn integration"]]
+        p12[["pda-ipython-jupyter-workflow<br/>Pure-Python reproduction of IPython/Jupyter analysis workflow<br/>Magic commands, timing, profiling, code introspection<br/>Structure notebook for reproducibility"]]
+        p13[["pda-analysis-examples<br/>Analysis examples and worked demonstrations<br/>End-to-end analysis walkthroughs<br/>Reference implementations"]]]
 
-    linkStyle default stroke-width:2px,fill:none,stroke:#666
+        p1 --> p2 --> p3 --> p4 --> p5 --> p6 --> p7 --> p8 --> p9 --> p10 --> p11 --> p12 --> p13
+    end
+
+    class PDA group
+    linkStyle default stroke-width:2px,fill:none,stroke:#43a047

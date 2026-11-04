@@ -1,30 +1,36 @@
+%%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#e1f5fe', 'primaryTextColor': '#01579b', 'primaryBorderColor': '#0277bd', 'lineColor': '#0288d1', 'secondaryColor': '#f1f8e9', 'tertiaryColor': '#fff3e0'}}}%%
 flowchart TD
-    classDef default fill:#f9f,stroke:#333,stroke-width:2px
-    classDef entry fill:#bbf,stroke:#f66,stroke-width:2px
-    classDef analysis fill:#bfb,stroke:#f66,stroke-width:2px
+    classDef default fill:#e1f5fe,stroke:#01579b,stroke-width:2px,color:#01579b,font-size:11px
+    classDef group fill:#c5e1a5,stroke:#33691e,stroke-width:3px,color:#33691e,font-size:12px,font-weight:bold
 
-    A[Study Design & Question] --> B[Sampling Methods]
-    B --> C[Variable Types & Encoding]
-    C --> D[Data Collection Protocols]
-    D --> E[Distributions: Normal Model]
-    E --> F[Graphical Summaries]
-    F --> G[Numerical Summaries: Quantitative]
-    G --> H[Numerical Summaries: Qualitative]
-    H --> I[Confidence Intervals: Single]
-    I --> J[Confidence Intervals: Comparisons]
-    J --> K[Hypothesis Testing Framework]
-    K --> L[Hypothesis Tests: Means]
-    L --> M[Hypothesis Tests: Categorical]
-    M --> N[Correlation]
-    N --> O[Linear Regression]
-    O --> P[Probability & Decision Logic]
-    P --> Q[Confounding & Blinding: Experimental]
-    Q --> R[Confounding & Blinding: Observational]
-    R --> S[Statistical Reference]
-    S --> T[Reporting Research]
+    subgraph SRM["SRM - Statistical Research Methods (22 skills) - Copyright Ahsan Mandhar"]
+        direction TB
 
-    A:::entry
-    S:::analysis
-    T:::analysis
+        s1[["srm-research-question-design<br/>Turn a topic into an answerable quantitative research question<br/>Extract POCI elements: Population, Outcome, Comparison, Intervention<br/>Identify response and explanatory variables"]]
+        s2[["srm-study-design-selection<br/>Pick and encode the right quantitative design from POCI components<br/>Descriptive vs analytical vs experimental design<br/>Draft a study-design protocol"]]
+        s3[["srm-sampling-methods<br/>Draw and audit research samples using numpy.random and pandas.sample<br/>Simple random, systematic, stratified, cluster sampling<br/>Assess whether a sample can represent its population"]]
+        s4[["srm-variable-types-encoding<br/>Classify every variable as quantitative or qualitative<br/>Nominal vs ordinal, discrete vs continuous<br/>Encode into correct pandas dtype"]]
+        s5[["srm-data-collection-protocols<br/>Study measurement and data capture protocols<br/>Data collection planning and execution"]]
+        s6[["srm-numerical-summaries-quantitative<br/>Numerically describe one quantitative variable or many by group<br/>Mean vs median, range, sample standard deviation, variance<br/>IQR, percentiles, standardise to z-score, flag outliers"]]
+        s7[["srm-numerical-summaries-qualitative<br/>Numerically summarise qualitative categorical data<br/>Overall, row and column proportions and percentages<br/>Odds or odds ratio from a contingency table"]]
+        s8[["srm-graphical-summaries<br/>Visualise distributions and relationships graphically<br/>Publication-quality figures from pandas frames"]]
+        s9[["srm-distributions-normal-model<br/>Normal distribution model in pure Python<br/>Probability density, z-scores, standard normal table"]]
+        s10[["srm-confidence-intervals-single<br/>Confidence interval for ONE population proportion or mean<br/>90/95/99% CI, margin of error, standard error<br/>Sample size determination"]]
+        s11[["srm-confidence-intervals-comparisons<br/>Confidence intervals for comparisons between two groups<br/>Paired before/after mean differences<br/>Two independent means: Welch vs pooled<br/>Odds ratio from four cell counts"]]
+        s12[["srm-hypothesis-testing-framework<br/>Hypothesis testing framework: null vs alternative<br/>P-values, Type I and Type II errors, statistical power<br/>Decision logic for accepting or rejecting hypotheses"]]
+        s13[["srm-hypothesis-tests-means<br/>t-tests: one-sample, paired/dependent, two-sample/Welch<br/>Equal vs unequal variance assumptions<br/>Turn a t-statistic into a P-value"]]
+        s14[["srm-hypothesis-tests-categorical<br/>Chi-square tests for categorical data<br/>Independence and goodness-of-fit tests<br/>Expected counts below 5 rule"]]
+        s15[["srm-correlation<br/>Scatterplot reading: form, direction, variation, outliers<br/>Pearson correlation coefficient r and R-squared<br/>Influential points detection"]]
+        s16[["srm-linear-regression<br/>Fit simple linear regression y_hat = b0 + b1*x<br/>Least-squares OLS via pure Python<br/>Interpret slope and intercept, test slope significance"]]
+        s17[["srm-probability-and-decision-logic<br/>Probability from three approaches: classical, frequentist, subjective<br/>Independence of events, conditional probability<br/>Expected number of outcomes"]]
+        s18[["srm-confounding-and-blinding-experimental<br/>Protect internal validity of an experiment treatment vs control<br/>Balance groups, check randomisation, SRM check<br/>A/B test and clinical trial design audit"]]
+        s19[["srm-confounding-and-blinding-observational<br/>Confounding and blinding for observational non-randomised studies<br/>Cohort, cross-sectional, case-control designs<br/>Baseline imbalance tables, crude vs adjusted numbers"]]
+        s20[["srm-statistical-reference<br/>Lookup reference layer for Dunn Scientific Research and Methodology<br/>Notation dictionary, parameter vs statistic vs standard error<br/>Verify code against book printed answers"]]
+        s21[["srm-reporting-research<br/>Build and QC the written scientific report following Dunn structure<br/>AIMRaD and STARD-compliant report assembly<br/>Results section, tables, figures, critical reading"]]
+        s22[["srm-correlation-linear-integration<br/>Integrate correlation and regression results<br/>Combine r, R-squared, and regression output<br/>Report strength of evidence and effect size"]]
 
-    linkStyle default stroke-width:2px,fill:none,stroke:#666
+        s1 --> s2 --> s3 --> s4 --> s5 --> s6 --> s7 --> s8 --> s9 --> s10 --> s11 --> s12 --> s13 --> s14 --> s15 --> s16 --> s17 --> s18 --> s19 --> s20 --> s21 --> s22
+    end
+
+    class SRM group
+    linkStyle default stroke-width:2px,fill:none,stroke:#0288d1

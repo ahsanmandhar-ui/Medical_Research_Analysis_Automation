@@ -1,22 +1,27 @@
+%%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#fff3e0', 'primaryTextColor': '#e65100', 'primaryBorderColor': '#f57c00', 'lineColor': '#fb8c00', 'secondaryColor': '#e1f5fe', 'tertiaryColor': '#f3e5f5'}}}%%
 flowchart TD
-    classDef default fill:#f9f,stroke:#333,stroke-width:2px
-    classDef entry fill:#bbf,stroke:#f66,stroke-width:2px
-    classDef analysis fill:#bfb,stroke:#f66,stroke-width:2px
+    classDef default fill:#fff3e0,stroke:#e65100,stroke-width:2px,color:#e65100,font-size:11px
+    classDef group fill:#c5e1a5,stroke:#33691e,stroke-width:3px,color:#33691e,font-size:12px,font-weight:bold
 
-    A[Vectors / Matrices / Arrays] --> B[Data Loading]
-    B --> C[Data Wrangling]
-    C --> D[Datetime Features]
-    D --> E[Categorical Features]
-    E --> F[Text Features]
-    F --> G[Numerical Features]
-    G --> H[Dimensionality Reduction & Extraction]
-    H --> I[Naive Bayes]
-    I --> J[SVM]
-    J --> K[Trees & Forests]
-    K --> L[Neural Networks]
-    L --> M[Clustering]
+    subgraph MLK["MLK - Machine Learning (13 skills) - Copyright Ahsan Mandhar"]
+        direction TB
 
-    A:::entry
-    M:::analysis
+        l1[["mlk-vectors-matrices-arrays<br/>Linear algebra for ML: vectors, matrices, tensors<br/>Dot/inner products, norms, projections<br/>Matrix multiply, inverse, solve<br/>Eigenvalues, SVD, PCA mechanics, loss functions"]]
+        l2[["mlk-data-loading<br/>Load data into training-ready pandas/sklearn frame<br/>scikit-learn toy datasets, seeded simulated generators<br/>Import CSV, Excel, JSON<br/>Query database into DataFrame"]]
+        l3[["mlk-data-wrangling<br/>Wrangle pandas DataFrame end to end in pure Python<br/>Creation, description, head/tail/shape/describe<br/>Drop duplicates, filter rows, group by category<br/>Handle NaN, join two frames"]]
+        l4[["mlk-datetime-features<br/>Parse date strings and build ML-ready temporal features<br/>to_datetime with explicit format<br/>Break timestamp into component features<br/>Encode day-of-week, compute time differences"]]
+        l5[["mlk-categorical-features<br/>Encode categorical string features into numeric ML inputs<br/>Label and ordinal reduction, one-hot/dummy encoding<br/>Target-encode a group, handle high-cardinality features"]]
+        l6[["mlk-text-features<br/>Text features for machine learning in pure Python<br/>Strip whitespace and punctuation<br/>CountVectorizer, TfidfVectorizer pipelines<br/>Stemming, stop-word lists"]]
+        l7[["mlk-numerical-features<br/>Build ML-ready numeric features from quantitative columns<br/>Scale, normalise, standardise numeric features<br/>Polynomial and interaction terms<br/>Log/sqrt transform, outlier detection, binning"]]
+        l8[["mlk-dim-reduction-extraction<br/>Reduce original features to smaller projected components<br/>PCA with variance target, ICA, NMF, kernel PCA<br/>t-SNE, TruncatedSVD<br/>How many components keep 95% or 99% variance"]]
+        l9[["mlk-naive-bayes<br/>Train Gaussian, multinomial, Bernoulli naive Bayes classifiers<br/>sklearn.naive_bayes with numpy<br/>Compare NB variants for different data types"]]
+        l10[["mlk-svm<br/>Train, inspect and tune support vector machines<br/>sklearn.svm LinearSVC, SVC, SVR<br/>Max-margin hyperplane, kernel trick<br/>C/gamma values, class probabilities"]]
+        l11[["mlk-trees-forests<br/>Train, prune, export and interpret decision trees, random forests, boosted trees<br/>sklearn.tree, sklearn.ensemble, numpy<br/>Feature importance, OOB score, gradient boosting"]]
+        l12[["mlk-neural-networks<br/>Build, train and diagnose feedforward neural networks<br/>Hand-written one-hidden-layer numpy MLP<br/>Forward propagation, overfitting diagnostics<br/>Keras-style DNN/MLP fundamentals"]]
+        l13[["mlk-clustering<br/>Partition observations with no target unsupervised clustering<br/>sklearn.cluster + sklearn.metrics<br/>How many clusters, silhouette analysis<br/>K-means, hierarchical, DBSCAN"]]]
 
-    linkStyle default stroke-width:2px,fill:none,stroke:#666
+        l1 --> l2 --> l3 --> l4 --> l5 --> l6 --> l7 --> l8 --> l9 --> l10 --> l11 --> l12 --> l13
+    end
+
+    class MLK group
+    linkStyle default stroke-width:2px,fill:none,stroke:#fb8c00

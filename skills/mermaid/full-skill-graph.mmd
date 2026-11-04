@@ -1,27 +1,31 @@
+%%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#e1f5fe', 'primaryTextColor': '#01579b', 'primaryBorderColor': '#0277bd', 'lineColor': '#0288d1', 'secondaryColor': '#f1f8e9', 'tertiaryColor': '#fff3e0'}}}%%
 flowchart TB
-    subgraph SRM["SRM — Statistical Research Methods (28)"]
+    classDef family fill:#e1f5fe,stroke:#01579b,stroke-width:3px,color:#01579b,font-size:13px,font-weight:bold
+    classDef link stroke:#0288d1,stroke-width:2px
+
+    subgraph SRM["SRM - Statistical Research Methods (22 skills) - Copyright Ahsan Mandhar"]
         direction TB
-        s1[Study Design] --> s2[Sampling] --> s3[Variables] --> s4[Distributions] --> s5[CI & Hypothesis] --> s6[Regression] --> s7[Reporting]
+        s1[Study Design & Question] --> s2[Sampling Methods] --> s3[Variable Types & Encoding] --> s4[Data Collection] --> s5[Distributions] --> s6[Graphical Summaries] --> s7[CI Single] --> s8[CI Comparisons] --> s9[Hypothesis Framework] --> s10[t-Tests Means] --> s11[Chi-Square Categorical] --> s12[Correlation] --> s13[Linear Regression] --> s14[Probability & Decision] --> s15[Confounding Experimental] --> s16[Confounding Observational] --> s17[Statistical Reference] --> s18[Reporting Research] --> s19[Correlation-Linear Integration]
     end
 
-    subgraph MAA["MAA — Meta-Analysis (7)"]
+    subgraph MAA["MAA - Meta-Analysis (7 skills) - Copyright Ahsan Mandhar"]
         direction TB
-        m1[Effect Sizes] --> m2[Pooling] --> m3[Heterogeneity] --> m4[Forest Plots] --> m5[Publication Bias] --> m6[Subgroup] --> m7[Validation]
+        m1[Effect Sizes] --> m2[Pooling Models] --> m3[Heterogeneity] --> m4[Forest Plots] --> m5[Publication Bias] --> m6[Subgroup Meta-Regression] --> m7[Validation vs R Stata]
     end
 
-    subgraph PDA["PDA — Python Data Analysis (13)"]
+    subgraph PDA["PDA - Python Data Analysis (13 skills) - Copyright Ahsan Mandhar"]
         direction TB
-        p1[Python Core] --> p2[NumPy] --> p3[Pandas] --> p4[Data IO] --> p5[Cleaning] --> p6[Wrangling] --> p7[GroupBy] --> p8[Time Series] --> p9[Plotting] --> p10[Modeling] --> p11[Jupyter] --> p12[Examples]
+        p1[Python Language Core] --> p2[NumPy Fundamentals] --> p3[NumPy Advanced] --> p4[Pandas Foundations] --> p5[Data Loading IO] --> p6[Data Cleaning] --> p7[Data Wrangling Reshape] --> p8[GroupBy Aggregation] --> p9[Time Series] --> p10[Plotting Visualization] --> p11[Modeling Libraries] --> p12[IPython Jupyter Workflow] --> p13[Analysis Examples]
     end
 
-    subgraph MLK["MLK — Machine Learning (13)"]
+    subgraph MLK["MLK - Machine Learning (13 skills) - Copyright Ahsan Mandhar"]
         direction TB
-        l1[Linear Algebra] --> l2[Data Loading] --> l3[Features] --> l4[Dimensionality] --> l5[Classification] --> l6[Trees] --> l7[Neural Nets] --> l8[Clustering]
+        l1[Vectors Matrices Arrays] --> l2[Data Loading] --> l3[Data Wrangling] --> l4[Datetime Features] --> l5[Categorical Features] --> l6[Text Features] --> l7[Numerical Features] --> l8[Dimensionality Reduction] --> l9[Naive Bayes] --> l10[SVM] --> l11[Trees Forests] --> l12[Neural Networks] --> l13[Clustering]
     end
 
-    subgraph FLOW["FLOW — Workflow (6)"]
+    subgraph FLOW["FLOW - Workflow (6 skills) - Copyright Ahsan Mandhar"]
         direction TB
-        f1[Env] --> f2[Hygiene] --> f3[Supervisor] --> f4[Pipeline] --> f5[Meta-Analysis Pipeline] --> f6[Corpus Extraction]
+        f1[Python Analysis Env] --> f2[Unit Hygiene] --> f3[Supervisor] --> f4[Analysis Pipeline Dunn] --> f5[Meta-Analysis Pipeline] --> f6[Corpus Extraction]
     end
 
     SRM --> MAA
@@ -29,7 +33,5 @@ flowchart TB
     PDA --> MLK
     MLK --> FLOW
 
-    classDef family fill:#f9f,stroke:#333,stroke-width:3px
     class SRM,MAA,PDA,MLK,FLOW family
-
-    linkStyle default stroke-width:2px,fill:none,stroke:#666
+    linkStyle default stroke-width:2px,fill:none,stroke:#0288d1

@@ -1,15 +1,20 @@
+%%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#fce4ec', 'primaryTextColor': '#880e4f', 'primaryBorderColor': '#ad1457', 'lineColor': '#d81b60', 'secondaryColor': '#e1f5fe', 'tertiaryColor': '#fff3e0'}}}%%
 flowchart TD
-    classDef default fill:#f9f,stroke:#333,stroke-width:2px
-    classDef entry fill:#bbf,stroke:#f66,stroke-width:2px
-    classDef analysis fill:#bfb,stroke:#f66,stroke-width:2px
+    classDef default fill:#fce4ec,stroke:#880e4f,stroke-width:2px,color:#880e4f,font-size:11px
+    classDef group fill:#c5e1a5,stroke:#33691e,stroke-width:3px,color:#33691e,font-size:12px,font-weight:bold
 
-    A[Python Analysis Env] --> B[Unit Hygiene]
-    B --> C[Supervisor]
-    C --> D[Analysis Pipeline: Dunn]
-    D --> E[Meta-Analysis Pipeline]
-    E --> F[Corpus Extraction]
+    subgraph FLOW["FLOW - Workflow (6 skills) - Copyright Ahsan Mandhar"]
+        direction TB
 
-    A:::entry
-    F:::analysis
+        f1[["flow-py-analysis-env<br/>Python analysis environment setup<br/>Environment pinning, reproducibility gates"]]]
+        f2[["flow-unit-hygiene<br/>Unit hygiene and provenance gates<br/>Audit trails, reproducibility checks"]]]
+        f3[["flow-supervisor<br/>Organise parallel work across many skills<br/>Fleet supervision, task coordination"]]]
+        f4[["flow-analysis-pipeline-dunn<br/>Run and gate a whole quantitative study in Python<br/>Research question -> design -> describe -> infer -> report<br/>Following Dunn's six basic steps"]]]
+        f5[["flow-meta-analysis-pipeline<br/>End-to-end meta-analysis / evidence pooling<br/>Study-level intake, per-study effect sizes<br/>Reproduce Cochrane pooled estimate"]]]
+        f6[["flow-corpus-extraction<br/>Re-extract or extend PDF document corpus with PyMuPDF<br/>Inclusive page-range Markdown rendering<br/>Monospace code detection by per-line font mix<br/>Map printed folios to PDF pages"]]]
 
-    linkStyle default stroke-width:2px,fill:none,stroke:#666
+        f1 --> f2 --> f3 --> f4 --> f5 --> f6
+    end
+
+    class FLOW group
+    linkStyle default stroke-width:2px,fill:none,stroke:#d81b60
