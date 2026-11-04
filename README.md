@@ -1,4 +1,7 @@
 # Medical Research Analysis Automation Toolkit (Allign with standard books)
+__version__ = "1.0.0"
+__methodology__ = "Cochrane Handbook for Systematic Reviews of Interventions & McKinney Python for Data Analysis Alignment Layer"
+
 
 [![Python](https://img.shields.io/badge/Python-3.10+-blue.svg)](https://www.python.org/)
 [![TimesFM](https://img.shields.io/badge/TimesFM-1.0-200M-purple.svg)](https://github.com/google-research/timesfm)
