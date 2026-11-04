@@ -13,6 +13,10 @@ __methodology__ = "Cochrane Handbook for Systematic Reviews of Interventions & M
 > Copyright © Ahsan Mandhar.
 
 ---
+## Core Standards Mapping
+* **Statistical Logic:** Verified explicitly against Dunn's Scientific Research Methods framework.
+* **Evidence Pooling:** Algorithmic alignment matching the Cochrane Handbook for Systematic Reviews of Interventions protocol guidelines.
+* **Data Mutation Engine:** Zero-copy, strict vector structures built following Python for Data Analysis standard practices.
 
 ## TimesFM Forecast: Meta-Analysis Publications (2015-2031)
 
