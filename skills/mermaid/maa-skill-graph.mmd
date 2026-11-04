@@ -1,0 +1,16 @@
+flowchart TD
+    classDef default fill:#f9f,stroke:#333,stroke-width:2px
+    classDef entry fill:#bbf,stroke:#f66,stroke-width:2px
+    classDef analysis fill:#bfb,stroke:#f66,stroke-width:2px
+
+    A[Effect Sizes] --> B[Pooling Models]
+    B --> C[Heterogeneity]
+    C --> D[Forest Plots]
+    D --> E[Publication Bias]
+    E --> F[Subgroup & Meta-Regression]
+    F --> G[Validation vs R/Stata]
+
+    A:::entry
+    G:::analysis
+
+    linkStyle default stroke-width:2px,fill:none,stroke:#666

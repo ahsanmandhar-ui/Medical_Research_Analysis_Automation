@@ -1,0 +1,60 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual environments
+.venv/
+env/
+venv/
+ENV/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.oxlintrc.json
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Environment & secrets
+.env
+.env.local
+.env.*.local
+*.log
+*.pem
+
+# AI / cache junk
+*.zip
+*.tar.gz
+*.gz
+tmp/
+.cache/
+hf_timesfm_*/
+.huggingface/
+
+# Generated AI artifacts (exclude auto-generated)
+*_ai_generated*
+*_generated.py
+
+# Jupyter
+.ipynb_checkpoints/

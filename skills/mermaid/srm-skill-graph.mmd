@@ -1,0 +1,30 @@
+flowchart TD
+    classDef default fill:#f9f,stroke:#333,stroke-width:2px
+    classDef entry fill:#bbf,stroke:#f66,stroke-width:2px
+    classDef analysis fill:#bfb,stroke:#f66,stroke-width:2px
+
+    A[Study Design & Question] --> B[Sampling Methods]
+    B --> C[Variable Types & Encoding]
+    C --> D[Data Collection Protocols]
+    D --> E[Distributions: Normal Model]
+    E --> F[Graphical Summaries]
+    F --> G[Numerical Summaries: Quantitative]
+    G --> H[Numerical Summaries: Qualitative]
+    H --> I[Confidence Intervals: Single]
+    I --> J[Confidence Intervals: Comparisons]
+    J --> K[Hypothesis Testing Framework]
+    K --> L[Hypothesis Tests: Means]
+    L --> M[Hypothesis Tests: Categorical]
+    M --> N[Correlation]
+    N --> O[Linear Regression]
+    O --> P[Probability & Decision Logic]
+    P --> Q[Confounding & Blinding: Experimental]
+    Q --> R[Confounding & Blinding: Observational]
+    R --> S[Statistical Reference]
+    S --> T[Reporting Research]
+
+    A:::entry
+    S:::analysis
+    T:::analysis
+
+    linkStyle default stroke-width:2px,fill:none,stroke:#666

@@ -1,0 +1,35 @@
+flowchart TB
+    subgraph SRM["SRM — Statistical Research Methods (28)"]
+        direction TB
+        s1[Study Design] --> s2[Sampling] --> s3[Variables] --> s4[Distributions] --> s5[CI & Hypothesis] --> s6[Regression] --> s7[Reporting]
+    end
+
+    subgraph MAA["MAA — Meta-Analysis (7)"]
+        direction TB
+        m1[Effect Sizes] --> m2[Pooling] --> m3[Heterogeneity] --> m4[Forest Plots] --> m5[Publication Bias] --> m6[Subgroup] --> m7[Validation]
+    end
+
+    subgraph PDA["PDA — Python Data Analysis (13)"]
+        direction TB
+        p1[Python Core] --> p2[NumPy] --> p3[Pandas] --> p4[Data IO] --> p5[Cleaning] --> p6[Wrangling] --> p7[GroupBy] --> p8[Time Series] --> p9[Plotting] --> p10[Modeling] --> p11[Jupyter] --> p12[Examples]
+    end
+
+    subgraph MLK["MLK — Machine Learning (13)"]
+        direction TB
+        l1[Linear Algebra] --> l2[Data Loading] --> l3[Features] --> l4[Dimensionality] --> l5[Classification] --> l6[Trees] --> l7[Neural Nets] --> l8[Clustering]
+    end
+
+    subgraph FLOW["FLOW — Workflow (6)"]
+        direction TB
+        f1[Env] --> f2[Hygiene] --> f3[Supervisor] --> f4[Pipeline] --> f5[Meta-Analysis Pipeline] --> f6[Corpus Extraction]
+    end
+
+    SRM --> MAA
+    MAA --> PDA
+    PDA --> MLK
+    MLK --> FLOW
+
+    classDef family fill:#f9f,stroke:#333,stroke-width:3px
+    class SRM,MAA,PDA,MLK,FLOW family
+
+    linkStyle default stroke-width:2px,fill:none,stroke:#666

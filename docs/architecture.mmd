@@ -1,0 +1,26 @@
+flowchart TD
+    classDef data fill:#bbf,stroke:#333,stroke-width:2px
+    classDef process fill:#bfb,stroke:#333,stroke-width:2px
+    classDef model fill:#fbb,stroke:#333,stroke-width:2px
+    classDef output fill:#bfb,stroke:#333,stroke-width:2px
+
+    A[CSV: meta_analysis_publications_2015_2026.csv]:::data
+    B[timesfm_forecast_v2.py]:::process
+    C[TimesFM 1.0-200M Model]:::model
+    D[Forecast CSV 2027-2031]:::output
+    E[Forecast PNG]:::output
+    F[Research Toolkit Skills (61)]:::process
+    G[Mermaid Diagrams]:::output
+    H[README.md UI]:::output
+
+    A --> B
+    B --> C
+    C --> D
+    C --> E
+    F --> G
+    B --> H
+    G --> H
+    D --> H
+    E --> H
+
+    linkStyle default stroke-width:2px,fill:none,stroke:#666

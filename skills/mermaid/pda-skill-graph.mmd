@@ -1,0 +1,22 @@
+flowchart TD
+    classDef default fill:#f9f,stroke:#333,stroke-width:2px
+    classDef entry fill:#bbf,stroke:#f66,stroke-width:2px
+    classDef analysis fill:#bfb,stroke:#f66,stroke-width:2px
+
+    A[Python Language Core] --> B[NumPy Fundamentals]
+    B --> C[NumPy Advanced]
+    C --> D[Pandas Foundations]
+    D --> E[Data Loading / IO]
+    E --> F[Data Cleaning]
+    F --> G[Data Wrangling / Reshape]
+    G --> H[GroupBy & Aggregation]
+    H --> I[Time Series]
+    I --> J[Plotting & Visualization]
+    J --> K[Modeling Libraries]
+    K --> L[IPython / Jupyter Workflow]
+    L --> M[Analysis Examples]
+
+    A:::entry
+    M:::analysis
+
+    linkStyle default stroke-width:2px,fill:none,stroke:#666
