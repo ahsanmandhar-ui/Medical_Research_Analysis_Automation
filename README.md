@@ -1,4 +1,4 @@
-# Medical Research Automation Toolkit
+# Medical Research Analysis Automation Toolkit
 
 [![Python](https://img.shields.io/badge/Python-3.10+-blue.svg)](https://www.python.org/)
 [![TimesFM](https://img.shields.io/badge/TimesFM-1.0-200M-purple.svg)](https://github.com/google-research/timesfm)
