@@ -217,4 +217,77 @@ flowchart TB
 ```
 
 
+### SRM — Statistical Research Methods (22 Skills)
+
+```mermaid
+flowchart TB
+    subgraph D["1. Design & Data Foundation"]
+        direction TB
+        s1["srm-research-question-design"]
+        s2["srm-study-design-selection"]
+        s3["srm-sampling-methods"]
+        s4["srm-variable-types-encoding"]
+        s5["srm-data-collection-protocols"]
+    end
+
+    subgraph SUM["2. Summaries & Distributions"]
+        direction TB
+        s6["srm-numerical-summaries-quantitative"]
+        s7["srm-numerical-summaries-qualitative"]
+        s8["srm-graphical-summaries"]
+        s9["srm-distributions-normal-model"]
+    end
+
+    subgraph EST["3. Estimation - Confidence Intervals"]
+        direction TB
+        s10["srm-confidence-intervals-single"]
+        s11["srm-confidence-intervals-comparisons"]
+    end
+
+    subgraph HT["4. Hypothesis Testing"]
+        direction TB
+        s12["srm-hypothesis-testing-framework"]
+        s13["srm-hypothesis-tests-means"]
+        s14["srm-hypothesis-tests-categorical"]
+    end
+
+    subgraph REL["5. Relationships"]
+        direction TB
+        s15["srm-correlation"]
+        s16["srm-linear-regression"]
+        s22["srm-correlation-linear-integration"]
+    end
+
+    subgraph VAL["6. Probability & Validity"]
+        direction TB
+        s17["srm-probability-and-decision-logic"]
+        s18["srm-confounding-and-blinding-experimental"]
+        s19["srm-confounding-and-blinding-observational"]
+    end
+
+    subgraph REP["7. Reference & Reporting"]
+        direction TB
+        s20["srm-statistical-reference"]
+        s21["srm-reporting-research"]
+    end
+
+    D --> SUM
+    SUM --> EST
+    EST --> HT
+    HT --> REL
+    REL --> VAL
+    VAL --> REP
+
+    style D fill:#FFF3BF,stroke:#B8860B,stroke-width:2px,color:#000
+    style SUM fill:#FFF3BF,stroke:#B8860B,stroke-width:2px,color:#000
+    style EST fill:#FFF3BF,stroke:#B8860B,stroke-width:2px,color:#000
+    style HT fill:#FFF3BF,stroke:#B8860B,stroke-width:2px,color:#000
+    style REL fill:#FFF3BF,stroke:#B8860B,stroke-width:2px,color:#000
+    style VAL fill:#FFF3BF,stroke:#B8860B,stroke-width:2px,color:#000
+    style REP fill:#FFF3BF,stroke:#B8860B,stroke-width:2px,color:#000
+
+    classDef srm fill:#FFD166,stroke:#B8860B,stroke-width:2px,color:#000
+    class s1,s2,s3,s4,s5,s6,s7,s8,s9,s10,s11,s12,s13,s14,s15,s16,s17,s18,s19,s20,s21,s22 srm
+```
+
 
