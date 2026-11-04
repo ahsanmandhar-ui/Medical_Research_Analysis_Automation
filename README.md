@@ -290,4 +290,32 @@ flowchart TB
     class s1,s2,s3,s4,s5,s6,s7,s8,s9,s10,s11,s12,s13,s14,s15,s16,s17,s18,s19,s20,s21,s22 srm
 ```
 
+### MAA — Meta-Analysis (7 Skills)
+
+```mermaid
+flowchart TB
+    subgraph MAA["MAA - Meta-Analysis (7 Skills)"]
+        direction TB
+        m1["maa-effect-sizes"]
+        m2["maa-pooling-models"]
+        m3["maa-heterogeneity"]
+        m4["maa-forest-plots"]
+        m5["maa-publication-bias"]
+        m6["maa-subgroup-meta-regression"]
+        m7["maa-validation-vs-r-stata"]
+    end
+
+    m1 --> m2
+    m2 --> m3
+    m3 --> m4
+    m4 --> m5
+    m5 --> m6
+    m6 --> m7
+
+    classDef maa fill:#8CE99A,stroke:#2F9E44,stroke-width:2px,color:#000000
+    class m1,m2,m3,m4,m5,m6,m7 maa
+
+    style MAA fill:#E6FCF5,stroke:#2F9E44,stroke-width:2px,color:#000000
+```
+
 
