@@ -319,3 +319,165 @@ flowchart TB
 ```
 
 
+### PDA — Python Data Analysis (13 Skills)
+
+```mermaid id="pda13"
+flowchart TB
+    subgraph CORE["1. Core: Python & NumPy"]
+        direction TB
+        p1["pda-python-language-core"]
+        p2["pda-numpy-fundamentals"]
+        p3["pda-numpy-advanced"]
+        p4["pda-pandas-foundations"]
+    end
+
+    subgraph DATA["2. Data IO & Cleaning"]
+        direction TB
+        p5["pda-data-loading-io"]
+        p6["pda-data-cleaning"]
+    end
+
+    subgraph RESHAPE["3. Reshape & Time Series"]
+        direction TB
+        p7["pda-data-wrangling-reshape"]
+        p8["pda-groupby-aggregation"]
+        p9["pda-time-series"]
+    end
+
+    subgraph VIZ["4. Plotting & Modeling"]
+        direction TB
+        p10["pda-plotting-visualization"]
+        p11["pda-modeling-libraries"]
+    end
+
+    subgraph WORKFLOW["5. Workflow & Examples"]
+        direction TB
+        p12["pda-ipython-jupyter-workflow"]
+        p13["pda-analysis-examples"]
+    end
+
+    CORE --> DATA
+    DATA --> RESHAPE
+    RESHAPE --> VIZ
+    VIZ --> WORKFLOW
+
+    style CORE fill:#E7F5FF,stroke:#1971C2,stroke-width:2px,color:#000000
+    style DATA fill:#E7F5FF,stroke:#1971C2,stroke-width:2px,color:#000000
+    style RESHAPE fill:#E7F5FF,stroke:#1971C2,stroke-width:2px,color:#000000
+    style VIZ fill:#E7F5FF,stroke:#1971C2,stroke-width:2px,color:#000000
+    style WORKFLOW fill:#E7F5FF,stroke:#1971C2,stroke-width:2px,color:#000000
+
+    classDef pda fill:#74C0FC,stroke:#1971C2,stroke-width:2px,color:#000000
+    class p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11,p12,p13 pda
+```
+
+### MLK — Machine Learning (13 Skills)
+
+```mermaid
+flowchart TB
+    subgraph FOUND["1. Foundations & Data"]
+        direction TB
+        l1["mlk-vectors-matrices-arrays"]
+        l2["mlk-data-loading"]
+        l3["mlk-data-wrangling"]
+    end
+
+    subgraph FEAT["2. Feature Engineering"]
+        direction TB
+        l4["mlk-datetime-features"]
+        l5["mlk-categorical-features"]
+        l6["mlk-text-features"]
+        l7["mlk-numerical-features"]
+    end
+
+    subgraph MODELS["3. Models & Clustering"]
+        direction TB
+        l8["mlk-dim-reduction-extraction"]
+        l9["mlk-naive-bayes"]
+        l10["mlk-svm"]
+        l11["mlk-trees-forests"]
+        l12["mlk-neural-networks"]
+        l13["mlk-clustering"]
+    end
+
+    FOUND --> FEAT
+    FEAT --> MODELS
+
+    style FOUND fill:#FFF0F0,stroke:#C92A2A,stroke-width:2px,color:#000000
+    style FEAT fill:#FFF0F0,stroke:#C92A2A,stroke-width:2px,color:#000000
+    style MODELS fill:#FFF0F0,stroke:#C92A2A,stroke-width:2px,color:#000000
+
+    classDef mlk fill:#FFA8A8,stroke:#C92A2A,stroke-width:2px,color:#000000
+    class l1,l2,l3,l4,l5,l6,l7,l8,l9,l10,l11,l12,l13 mlk
+```
+
+### FLOW — Workflow Automation (6 Skills)
+
+```mermaid id="flow06"
+flowchart TB
+    subgraph GATE["1. Environment & Hygiene Gates"]
+        direction TB
+        f1["flow-py-analysis-env"]
+        f2["flow-unit-hygiene"]
+    end
+
+    f3["flow-supervisor"]
+
+    subgraph PIPE["2. End-to-End Pipelines"]
+        direction TB
+        f4["flow-analysis-pipeline-dunn"]
+        f5["flow-meta-analysis-pipeline"]
+        f6["flow-corpus-extraction"]
+    end
+
+    f1 --> f2
+    f2 --> f3
+    f3 --> f4
+    f3 --> f5
+    f3 --> f6
+
+    style GATE fill:#F3F0FF,stroke:#6741D9,stroke-width:2px,color:#000000
+    style PIPE fill:#F3F0FF,stroke:#6741D9,stroke-width:2px,color:#000000
+
+    classDef flow fill:#D0BFFF,stroke:#6741D9,stroke-width:2px,color:#000000
+    class f1,f2,f3,f4,f5,f6 flow
+```
+
+### Dunn Research Skills — Architecture Overview (61 Skills)
+
+```mermaid
+flowchart TB
+    R["Dunn Research Skills<br/>61 Skills Across 5 Families"]
+
+    SRM["SRM - Statistical Research Methods<br/>22 Skills<br/>Question → Design → Describe → Infer → Report"]
+    MAA["MAA - Meta-Analysis<br/>7 Skills<br/>Effect Sizes, Pooling, Heterogeneity, Bias"]
+    PDA["PDA - Python Data Analysis<br/>13 Skills<br/>Python, NumPy, Pandas, Plotting, Modelling"]
+    MLK["MLK - Machine Learning<br/>13 Skills<br/>Linear Algebra, Features, Models, Clustering"]
+    FLOW["FLOW - Workflow<br/>6 Skills<br/>Environment, Hygiene Gates, Supervision, Pipelines"]
+
+    R --> SRM
+    R --> MAA
+    R --> PDA
+    R --> MLK
+    R --> FLOW
+
+    SRM --> PDA
+    MAA --> PDA
+    PDA --> MLK
+    FLOW --> SRM
+
+    classDef root fill:#FFFFFF,stroke:#000000,stroke-width:3px,color:#000000
+    classDef srm fill:#FFD166,stroke:#B8860B,stroke-width:2px,color:#000000
+    classDef maa fill:#8CE99A,stroke:#2F9E44,stroke-width:2px,color:#000000
+    classDef pda fill:#74C0FC,stroke:#1971C2,stroke-width:2px,color:#000000
+    classDef mlk fill:#FFA8A8,stroke:#C92A2A,stroke-width:2px,color:#000000
+    classDef flow fill:#D0BFFF,stroke:#6741D9,stroke-width:2px,color:#000000
+
+    class R root
+    class SRM srm
+    class MAA maa
+    class PDA pda
+    class MLK mlk
+    class FLOW flow
+```
+
