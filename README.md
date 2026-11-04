@@ -214,5 +214,123 @@ Only essential, human-reviewed files are tracked. Excluded via `.gitignore`:
 
 **Tracked files only:** `README.md`, `.gitignore`, `LICENSE`, `requirements.txt`, `data/*.csv`, `analysis/*.py`, `skills/**/*.md`, `skills/mermaid/*.mmd`, `docs/*.mmd`.
 
-### Repository Structure
+### SRM — Statistical Research Methods (22 skills)
+
+```mermaid
+flowchart TD
+    classDef default fill:#e1f5fe,stroke:#01579b,stroke-width:2px,color:#01579b,font-size:11px
+    classDef group fill:#c5e1a5,stroke:#33691e,stroke-width:3px,color:#33691e,font-size:12px,font-weight:bold
+
+    subgraph SRM["SRM - Statistical Research Methods (22 skills)"]
+        direction TB
+        s1[srm-research-question-design] --> s2[srm-study-design-selection] --> s3[srm-sampling-methods] --> s4[srm-variable-types-encoding] --> s5[srm-data-collection-protocols] --> s6[srm-numerical-summaries-quantitative] --> s7[srm-numerical-summaries-qualitative] --> s8[srm-graphical-summaries] --> s9[srm-distributions-normal-model] --> s10[srm-confidence-intervals-single] --> s11[srm-confidence-intervals-comparisons] --> s12[srm-hypothesis-testing-framework] --> s13[srm-hypothesis-tests-means] --> s14[srm-hypothesis-tests-categorical] --> s15[srm-correlation] --> s16[srm-linear-regression] --> s17[srm-probability-and-decision-logic] --> s18[srm-confounding-and-blinding-experimental] --> s19[srm-confounding-and-blinding-observational] --> s20[srm-statistical-reference] --> s21[srm-reporting-research] --> s22[srm-correlation-linear-integration]
+    end
+    class SRM group
+
+## Mermaid Diagram 2: MAA — Meta-Analysis
+
+```markdown
+### MAA — Meta-Analysis (7 skills)
+
+```mermaid
+flowchart TD
+    classDef default fill:#f3e5f5,stroke:#4a148c,stroke-width:2px,color:#4a148c,font-size:11px
+    classDef group fill:#c5e1a5,stroke:#33691e,stroke-width:3px,color:#33691e,font-size:12px,font-weight:bold
+
+    subgraph MAA["MAA - Meta-Analysis (7 skills)"]
+        direction TB
+        m1[maa-effect-sizes] --> m2[maa-pooling-models] --> m3[maa-heterogeneity] --> m4[maa-forest-plots] --> m5[maa-publication-bias] --> m6[maa-subgroup-meta-regression] --> m7[maa-validation-vs-r-stata]
+    end
+    class MAA group
+
+## Mermaid Diagram 3: PDA — Python Data Analysis
+
+```markdown
+### PDA — Python Data Analysis (13 skills)
+
+```mermaid
+flowchart TD
+    classDef default fill:#e8f5e9,stroke:#1b5e20,stroke-width:2px,color:#1b5e20,font-size:11px
+    classDef group fill:#c5e1a5,stroke:#33691e,stroke-width:3px,color:#33691e,font-size:12px,font-weight:bold
+
+    subgraph PDA["PDA - Python Data Analysis (13 skills)"]
+        direction TB
+        p1[pda-python-language-core] --> p2[pda-numpy-fundamentals] --> p3[pda-numpy-advanced] --> p4[pda-pandas-foundations] --> p5[pda-data-loading-io] --> p6[pda-data-cleaning] --> p7[pda-data-wrangling-reshape] --> p8[pda-groupby-aggregation] --> p9[pda-time-series] --> p10[pda-plotting-visualization] --> p11[pda-modeling-libraries] --> p12[pda-ipython-jupyter-workflow] --> p13[pda-analysis-examples]
+    end
+    class PDA group
+
+## Mermaid Diagram 4: MLK — Machine Learning
+
+```markdown
+### MLK — Machine Learning (13 skills)
+
+```mermaid
+flowchart TD
+    classDef default fill:#fff3e0,stroke:#e65100,stroke-width:2px,color:#e65100,font-size:11px
+    classDef group fill:#c5e1a5,stroke:#33691e,stroke-width:3px,color:#33691e,font-size:12px,font-weight:bold
+
+    subgraph MLK["MLK - Machine Learning (13 skills)"]
+        direction TB
+        l1[mlk-vectors-matrices-arrays] --> l2[mlk-data-loading] --> l3[mlk-data-wrangling] --> l4[mlk-datetime-features] --> l5[mlk-categorical-features] --> l6[mlk-text-features] --> l7[mlk-numerical-features] --> l8[mlk-dim-reduction-extraction] --> l9[mlk-naive-bayes] --> l10[mlk-svm] --> l11[mlk-trees-forests] --> l12[mlk-neural-networks] --> l13[mlk-clustering]
+    end
+    class MLK group
+
+## Mermaid Diagram 5: FLOW — Workflow
+
+```markdown
+### FLOW — Workflow (6 skills)
+
+```mermaid
+flowchart TD
+    classDef default fill:#fce4ec,stroke:#880e4f,stroke-width:2px,color:#880e4f,font-size:11px
+    classDef group fill:#c5e1a5,stroke:#33691e,stroke-width:3px,color:#33691e,font-size:12px,font-weight:bold
+
+    subgraph FLOW["FLOW - Workflow (6 skills)"]
+        direction TB
+        f1[flow-py-analysis-env] --> f2[flow-unit-hygiene] --> f3[flow-supervisor] --> f4[flow-analysis-pipeline-dunn] --> f5[flow-meta-analysis-pipeline] --> f6[flow-corpus-extraction]
+    end
+    class FLOW group
+
+## Mermaid Diagram 6: Full Skill Graph — All 61 Skills
+
+```markdown
+### Full Skill Graph — All 61 Skills
+
+```mermaid
+flowchart TB
+    classDef family fill:#e1f5fe,stroke:#01579b,stroke-width:3px,color:#01579b,font-size:13px,font-weight:bold
+
+    subgraph SRM["SRM - Statistical Research Methods (22 skills)"]
+        direction TB
+        s1[Study Design & Question] --> s2[Sampling Methods] --> s3[Variable Types & Encoding] --> s4[Data Collection] --> s5[Distributions] --> s6[Graphical Summaries] --> s7[CI Single] --> s8[CI Comparisons] --> s9[Hypothesis Framework] --> s10[t-Tests Means] --> s11[Chi-Square Categorical] --> s12[Correlation] --> s13[Linear Regression] --> s14[Probability & Decision] --> s15[Confounding Experimental] --> s16[Confounding Observational] --> s17[Statistical Reference] --> s18[Reporting Research] --> s19[Correlation-Linear Integration]
+    end
+
+    subgraph MAA["MAA - Meta-Analysis (7 skills)"]
+        direction TB
+        m1[Effect Sizes] --> m2[Pooling Models] --> m3[Heterogeneity] --> m4[Forest Plots] --> m5[Publication Bias] --> m6[Subgroup Meta-Regression] --> m7[Validation vs R Stata]
+    end
+
+    subgraph PDA["PDA - Python Data Analysis (13 skills)"]
+        direction TB
+        p1[Python Language Core] --> p2[NumPy Fundamentals] --> p3[NumPy Advanced] --> p4[Pandas Foundations] --> p5[Data Loading IO] --> p6[Data Cleaning] --> p7[Data Wrangling Reshape] --> p8[GroupBy Aggregation] --> p9[Time Series] --> p10[Plotting Visualization] --> p11[Modeling Libraries] --> p12[IPython Jupyter Workflow] --> p13[Analysis Examples]
+    end
+
+    subgraph MLK["MLK - Machine Learning (13 skills)"]
+        direction TB
+        l1[Vectors Matrices Arrays] --> l2[Data Loading] --> l3[Data Wrangling] --> l4[Datetime Features] --> l5[Categorical Features] --> l6[Text Features] --> l7[Numerical Features] --> l8[Dimensionality Reduction] --> l9[Naive Bayes] --> l10[SVM] --> l11[Trees Forests] --> l12[Neural Networks] --> l13[Clustering]
+    end
+
+    subgraph FLOW["FLOW - Workflow (6 skills)"]
+        direction TB
+        f1[Python Analysis Env] --> f2[Unit Hygiene] --> f3[Supervisor] --> f4[Analysis Pipeline Dunn] --> f5[Meta-Analysis Pipeline] --> f6[Corpus Extraction]
+    end
+
+    SRM --> MAA
+    MAA --> PDA
+    PDA --> MLK
+    MLK --> FLOW
+
+    class SRM,MAA,PDA,MLK,FLOW family
+    linkStyle default stroke-width:2px,fill:none,stroke:#0288d1
+
 
