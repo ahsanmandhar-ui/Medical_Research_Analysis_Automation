@@ -184,37 +184,68 @@ Zero-shot foundation forecast under AI-automation structural shift, generated wi
 | | f6 | flow-corpus-extraction |
 
 ---
-### Overview
+### SRM — Statistical Research Methods (22 skills)
 flowchart TB
-    R["Automation Research Skills<br/>61 skills across 5 families"]
+    subgraph D["① Design & Data Foundation"]
+        direction TB
+        s1[srm-research-question-design]
+        s2[srm-study-design-selection]
+        s3[srm-sampling-methods]
+        s4[srm-variable-types-encoding]
+        s5[srm-data-collection-protocols]
+    end
 
-    SRM["SRM · Statistical Research Methods<br/>22 skills<br/>Question → design → describe → infer → report"]
-    MAA["MAA · Meta-Analysis<br/>7 skills<br/>Effect sizes, pooling, heterogeneity, bias"]
-    PDA["PDA · Python Data Analysis<br/>13 skills<br/>Python, NumPy, pandas, plotting, modelling"]
-    MLK["MLK · Machine Learning<br/>13 skills<br/>Linear algebra, features, models, clustering"]
-    FLOW["FLOW · Workflow<br/>6 skills<br/>Environment, hygiene gates, supervision, pipelines"]
+    subgraph SUM["② Summaries & Distributions"]
+        direction TB
+        s6[srm-numerical-summaries-quantitative]
+        s7[srm-numerical-summaries-qualitative]
+        s8[srm-graphical-summaries]
+        s9[srm-distributions-normal-model]
+    end
 
-    R --> SRM
-    R --> MAA
-    R --> PDA
-    R --> MLK
-    R --> FLOW
+    subgraph EST["③ Estimation — Confidence Intervals"]
+        direction TB
+        s10[srm-confidence-intervals-single]
+        s11[srm-confidence-intervals-comparisons]
+    end
 
-    SRM --> PDA
-    MAA --> PDA
-    PDA --> MLK
-    FLOW --> SRM
+    subgraph HT["④ Hypothesis Testing"]
+        direction TB
+        s12[srm-hypothesis-testing-framework]
+        s13[srm-hypothesis-tests-means]
+        s14[srm-hypothesis-tests-categorical]
+    end
 
-    classDef root fill:#FFFFFF,stroke:#000000,stroke-width:3px,color:#000
+    subgraph REL["⑤ Relationships"]
+        direction TB
+        s15[srm-correlation]
+        s16[srm-linear-regression]
+        s22[srm-correlation-linear-integration]
+    end
+
+    subgraph VAL["⑥ Probability & Validity"]
+        direction TB
+        s17[srm-probability-and-decision-logic]
+        s18[srm-confounding-and-blinding-experimental]
+        s19[srm-confounding-and-blinding-observational]
+    end
+
+    subgraph REP["⑦ Reference & Reporting"]
+        direction TB
+        s20[srm-statistical-reference]
+        s21[srm-reporting-research]
+    end
+
+    D --> SUM --> EST --> HT --> REL --> VAL --> REP
+
+    style D fill:#FFF3BF,stroke:#B8860B,stroke-width:2px,color:#000
+    style SUM fill:#FFF3BF,stroke:#B8860B,stroke-width:2px,color:#000
+    style EST fill:#FFF3BF,stroke:#B8860B,stroke-width:2px,color:#000
+    style HT fill:#FFF3BF,stroke:#B8860B,stroke-width:2px,color:#000
+    style REL fill:#FFF3BF,stroke:#B8860B,stroke-width:2px,color:#000
+    style VAL fill:#FFF3BF,stroke:#B8860B,stroke-width:2px,color:#000
+    style REP fill:#FFF3BF,stroke:#B8860B,stroke-width:2px,color:#000
+
     classDef srm fill:#FFD166,stroke:#B8860B,stroke-width:2px,color:#000
-    classDef maa fill:#8CE99A,stroke:#2F9E44,stroke-width:2px,color:#000
-    classDef pda fill:#74C0FC,stroke:#1971C2,stroke-width:2px,color:#000
-    classDef mlk fill:#FFA8A8,stroke:#C92A2A,stroke-width:2px,color:#000
-    classDef flow fill:#D0BFFF,stroke:#6741D9,stroke-width:2px,color:#000
+    class s1,s2,s3,s4,s5,s6,s7,s8,s9,s10,s11,s12,s13,s14,s15,s16,s17,s18,s19,s20,s21,s22 srm
 
-    class R root
-    class SRM srm
-    class MAA maa
-    class PDA pda
-    class MLK mlk
-    class FLOW flow
